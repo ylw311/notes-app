@@ -1,5 +1,9 @@
+import NotesList from './components/notesList';
+
 const App = () => {
-  return <p>placeholder</p>;
+  return <div className='container'>
+    <NotesList />
+  </div>
 }
 
 export default App;
