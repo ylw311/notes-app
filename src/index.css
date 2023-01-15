@@ -12,6 +12,30 @@ code {
     monospace;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode div{
+  color: white;
+}
+
+.dark-mode ::placeholder {
+  color: rgb(20, 77, 127);
+}
+
+
+.dark-mode .search-icons {
+  color: black;
+}
+
+
 .note {
   background-color: rgba(0, 208, 255, 0.423);
   border-radius: 5px;
@@ -32,12 +56,12 @@ code {
 }
 
 .note.new {
-  background-color: rgb(0, 229, 255);
+  background-color: rgba(0, 255, 204, 0.638);
 
 }
 
 textarea {
-  background-color: rgb(0, 229, 255);
+  background-color: rgba(0, 255, 204, 0);
   border: none;
   resize: none;
 
@@ -72,6 +96,7 @@ textarea:focus {
   margin-left: auto;
   padding-right: 10px;
   padding-left: 10px;
+  min-height: 100vh;
 
 }
 
