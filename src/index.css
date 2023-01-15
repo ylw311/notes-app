@@ -5,54 +5,46 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: rgba(196, 230, 255, 0.285);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 10%;
 }
 
 .dark-mode {
   background-color: black;
 }
 
-.dark-mode div{
+.dark-mode h1{
   color: white;
 }
 
-.dark-mode ::placeholder {
-  color: rgb(20, 77, 127);
+span {
+  overflow-wrap: break-word;
 }
-
-
-.dark-mode .search-icons {
-  color: black;
-}
-
 
 .note {
-  background-color: rgba(0, 208, 255, 0.423);
+  background: linear-gradient(#F9EFAF, #F7E98D);
   border-radius: 5px;
   padding: 2rem;
   min-height: 100px;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   white-space: pre-wrap;
-
 }
+
 
 .notelist {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
 }
 
 .note.new {
@@ -72,8 +64,8 @@ textarea:focus {
 }
 
 .save {
-  background-color: rgb(0, 123, 255);
-  color: white;
+  background-color: rgb(233, 233, 233);
+  color: black;
   border: none;
   border-radius: 20px;
   padding: 8px 10px 8px 10px;
@@ -81,7 +73,8 @@ textarea:focus {
 
 .save:hover {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.39);
+  color: black;
+  background-color: rgba(255, 255, 255, 0.346);
 }
 
 .footer {
@@ -111,11 +104,13 @@ textarea:focus {
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 1.5em;
+  
 }
 
 .search input {
   border: none;
   background-color: rgb(233, 233, 233);
+  width: 100%;
 }
 
 .search input:focus {
