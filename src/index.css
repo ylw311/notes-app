@@ -21,6 +21,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  white-space: pre-wrap;
 
 }
 
@@ -71,5 +72,28 @@ textarea:focus {
   margin-left: auto;
   padding-right: 10px;
   padding-left: 10px;
+
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+}
+
+.search input:focus {
+  outline: none;
 
 }
