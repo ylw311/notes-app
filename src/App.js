@@ -5,27 +5,22 @@ import Header from "./components/Header";
 import NotesList from "./components/notesList";
 
 const App = () => {
-  const [note, setNote] = useState([]);
+  const [note, setNote] = useState(() => {
+    return JSON.parse(localStorage.getItem('react-notes-app-data')) || []
+		
+  });
 
   const [searchText, setSearchText] = useState("");
   const [darkMode, setDarkMode] = useState(false);
 
-  // useEffect(() => {
-	// 	const savedNotes = JSON.parse(
-	// 		localStorage.getItem('react-notes-app-data')
-	// 	);
+ 
 
-	// 	if (savedNotes) {
-	// 		setNote(savedNotes);
-	// 	}
-	// }, []);
-
-	// useEffect(() => {
-	// 	localStorage.setItem(
-	// 		'react-notes-app-data',
-	// 		JSON.stringify(note)
-	// 	);
-	// }, [note]);
+	useEffect(() => {
+		localStorage.setItem(
+			'react-notes-app-data',
+			JSON.stringify(note)
+		);
+	}, [note]);
 
 
   const createNote = (text) => {
